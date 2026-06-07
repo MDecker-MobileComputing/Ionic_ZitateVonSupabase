@@ -7,6 +7,7 @@ import { CapacitorHttp, HttpResponse } from '@capacitor/core';
  * Hilfsklasse für die Antwort der Supabase-API: enthält Zitat und Autor.
  */
 class ZitatAntwort {
+  
   public zitat: string = "";
   public autor: string = "";
 }
@@ -26,8 +27,6 @@ export class HomePage {
   /** Autor des Zitats */
   public autor: string = "";
 
-  //constructor() {}
-
 
   /**
    * Event-Handler für den Button "Zitat laden": Führt Anfrage mit Capacitor-HTTP 
@@ -35,32 +34,50 @@ export class HomePage {
    */
   public async onZitatLadenButton() {
 
+    this.zitat = "";
+    this.autor = "";
+
     const httpOptionen = {
       url: "https://ufflvoitmbboivgbtdwi.supabase.co/rest/v1/rpc/get_zufaelliges_zitat",
       headers: { "apikey": "sb_publishable_dIhq8GCAy-jbrh0VYE9xqg_cjLhcls0" }
     };
 
-    const httpAntwort: HttpResponse = await CapacitorHttp.get( httpOptionen);
-    if ( httpAntwort.status === 200  ) {
+    try {
 
-      const zufaelligeZitate = httpAntwort.data as ZitatAntwort[];
-      const zufaelligesZitat = zufaelligeZitate[0];
+      const httpAntwort: HttpResponse = await CapacitorHttp.get( httpOptionen);
+      if ( httpAntwort.status === 200  ) {
 
-      if ( zufaelligesZitat ) {
+        const zufaelligeZitateArray = httpAntwort.data as ZitatAntwort[];
 
-        this.zitat = zufaelligesZitat.zitat;
-        this.autor = zufaelligesZitat.autor;
+        if ( !zufaelligeZitateArray || zufaelligeZitateArray.length === 0 ) {
+          
+          this.zitat = "Fehler beim Laden des Zitats: leere Antwort";
+          this.autor = "";
+
+        } else {
+
+          const zufaelligesZitat = zufaelligeZitateArray[0];
+          if ( zufaelligesZitat ) {
+
+            this.zitat = zufaelligesZitat.zitat;
+            this.autor = zufaelligesZitat.autor;
+
+          } else {
+
+            this.zitat = "Fehler beim Laden des Zitats: leere Antwort";
+            this.autor = "";
+          }
+        }
 
       } else {
-
-        this.zitat = "Fehler beim Laden des Zitats: leere Antwort";
+        
+        this.zitat = "Fehler beim Laden des Zitats: " + httpAntwort.status;
         this.autor = "";
       }
+    } 
+    catch ( fehler ) {
 
-    } else {
-      
-      this.zitat = "Fehler beim Laden des Zitats: " + httpAntwort.status;
-      this.autor = "";
+      this.zitat = "Fehler beim Laden des Zitats: " + fehler;
     }
   }
 
