@@ -14,6 +14,11 @@ die mit [CapacitorHttp](https://capacitorjs.com/docs/apis/http) von einer auf
 
 <br>
 
+Die folgende SQL-Befehle sind auf der Web-Oberfläche im "SQL Editor" auszuführen
+(alle Befehle können mit *einem* Klick auf den "Run"-Button auf einmal ausgeführt werden).
+
+<br>
+
 ```
 	-- 1) Tabelle anlegen
 	CREATE TABLE IF NOT EXISTS public.zitate (
