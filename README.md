@@ -9,6 +9,10 @@ Zitate abruft.
 
 <br>
 
+![Screenshot](screenshot_1.png)
+
+<br>
+
 ----
 
 ## Backend auf Supabase einrichten ##

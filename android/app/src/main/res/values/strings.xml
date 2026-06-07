@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Zitate von Supabase</string>
+    <string name="title_activity_main">Zitate von Supabase</string>
+    <string name="package_name">de.eldecker.ionic.zitate</string>
+    <string name="custom_url_scheme">de.eldecker.ionic.zitate</string>
+</resources>
