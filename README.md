@@ -4,7 +4,8 @@
 
 Dieses Repo enthält das Quellcode-Projekt für eine einfache Ionic/Angular-App, 
 die mit [CapacitorHttp](https://capacitorjs.com/docs/apis/http) von einer auf 
-[Supabase](https://supabase.com/) gehosteten REST-API abzurufen.
+[Supabase](https://supabase.com/) gehosteten REST-API zufällig ausgewählte
+Zitate abruft.
 
 <br>
 
@@ -72,3 +73,4 @@ Die folgende SQL-Befehle sind auf der Web-Oberfläche im "SQL Editor" auszuführ
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License) for the files in this repository.
 
 <br>
+
