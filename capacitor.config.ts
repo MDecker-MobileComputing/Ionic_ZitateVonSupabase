@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'ZitatVonSupabase',
+  appId: 'de.eldecker.ionic.zitate',
+  appName: 'Zitate von Supabase',
   webDir: 'www'
 };
 
