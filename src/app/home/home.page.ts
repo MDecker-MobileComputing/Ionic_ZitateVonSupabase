@@ -7,7 +7,7 @@ import { CapacitorHttp, HttpResponse } from '@capacitor/core';
  * Hilfsklasse für die Antwort der Supabase-API: enthält Zitat und Autor.
  */
 class ZitatAntwort {
-  
+
   public zitat: string = "";
   public autor: string = "";
 }
@@ -32,14 +32,15 @@ export class HomePage {
    * Event-Handler für den Button "Zitat laden": Führt Anfrage mit Capacitor-HTTP 
    * an Supabase-API.
    */
+  
   public async onZitatLadenButton() {
 
     this.zitat = "";
     this.autor = "";
 
     const httpOptionen = {
-      url: "https://ufflvoitmbboivgbtdwi.supabase.co/rest/v1/rpc/get_zufaelliges_zitat",
-      headers: { "apikey": "sb_publishable_dIhq8GCAy-jbrh0VYE9xqg_cjLhcls0" }
+      url: "https://qlljavhtbzufbfunoxoz.supabase.co/rest/v1/rpc/get_zufaelliges_zitat",
+      headers: { "apikey": "sb_publishable_1aT2zuhIJGmFU6P3KwppRw_pz31R54G" }
     };
 
     try {
