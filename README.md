@@ -4,7 +4,8 @@
 
 Dieses Repo enthält das Quellcode-Projekt für eine einfache Ionic/Angular-App, 
 die mit [CapacitorHttp](https://capacitorjs.com/docs/apis/http) von einer auf 
-[Supabase](https://supabase.com/) gehosteten REST-API abzurufen.
+[Supabase](https://supabase.com/) gehosteten REST-API zufällig ausgewählte
+Zitate abruft.
 
 <br>
 
