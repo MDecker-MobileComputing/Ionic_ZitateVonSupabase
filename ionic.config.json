@@ -1,0 +1,7 @@
+{
+  "name": "ZitatVonSupabase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
