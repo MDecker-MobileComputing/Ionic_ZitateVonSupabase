@@ -87,6 +87,13 @@ INSERT INTO "public"."zitate" ("zitat", "autor") VALUES
 
 <br>
 
+Mit dem folgenden SQL-Statement können wir die Funktion `get_zufaelliges_zitat()` testen:
+```
+SELECT * FROM get_zufaelliges_zitat()
+```
+
+<br>
+
 ----
 
 ## License ##
