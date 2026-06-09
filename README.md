@@ -19,7 +19,7 @@ Zitate abruft.
 
 <br>
 
-Die folgende SQL-Befehle sind auf der Web-Oberfläche im "SQL Editor" auszuführen
+Die folgenden SQL-Befehle sind auf der Web-Oberfläche vom Supabase im "SQL Editor" auszuführen
 (alle Befehle können mit *einem* Klick auf den "Run"-Button auf einmal ausgeführt werden).
 
 <br>
