@@ -45,7 +45,7 @@ export class HomePage {
 
     try {
 
-      const httpAntwort: HttpResponse = await CapacitorHttp.get( httpOptionen);
+      const httpAntwort: HttpResponse = await CapacitorHttp.get( httpOptionen );
       if ( httpAntwort.status === 200  ) {
 
         const zufaelligeZitateArray = httpAntwort.data as ZitatAntwort[];
